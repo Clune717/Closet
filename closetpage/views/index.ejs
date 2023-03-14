@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dee's Closet</title>
+</head>
+<body>
+    <h1>Welcome To Dee's Closet</h1>
+    <%for(let i = 0; i < shoes.length; i++) {%>
+        <table>
+         <td>     
+          <tr> <%=shoes[i].brand%>
+          </br> 
+            <%=shoes[i].style%>
+           <img src='<%=shoes[i].img%>'></img>
+        </br>
+         <%=shoes[i].retail%>
+    </br>
+          <%=shoes[i].cost%> </tr>   
+           </td> 
+           <%}%>
+</body>
+</html>
