@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Price</title>
 </head>
 <body>
-    
+    <h1>Edit Price of Shoe</h1>
+    <form action="/" method="POST">
+         Style:<input type="text" name="style" value="<%=shoes.style%>" />
+       Sz:<input type="text" name="size" value="<%=shoes.size%>" />
+       <img src="<%=shoes.img%>">
+       Img: <input type="" name="img" value="<%=shoes.img%>" />
+       Cost: <input type="text" name="cost" value="<%=shoes.type%>" />
+          <input type="submit" value="EDIT">  
+    </form>  
 </body>
 </html>

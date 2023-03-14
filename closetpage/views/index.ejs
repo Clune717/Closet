@@ -15,13 +15,20 @@
          <td>     
           <tr> <%=shoes[i].brand%>
           </br> 
-            <%=shoes[i].style%>
-           <img src='<%=shoes[i].img%>'></img>
-        </br>
+           <a href="/<%=shoes[i]._id%>"><%=shoes[i].style%></a>
+            </br>
          <%=shoes[i].retail%>
+           <img src='<%=shoes[i].img%>'></img>
+            <form action="/<%=shoes[i]._id%>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE">
+                </form>
     </br>
           <%=shoes[i].cost%> </tr>   
            </td> 
            <%}%>
+           </table>
+           <a href="/new">Add A Shoe</a>
+    
+    
 </body>
 </html>

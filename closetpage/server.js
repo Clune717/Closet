@@ -24,6 +24,49 @@ app.get('/', (req,res) => {
     })
 })
 
+app.get('/new', (req,res)=> {
+    res.render('new.ejs')
+ })
+
+ app.get('/:id', (req, res) => {
+    Infoschema.findById(req.params.id).then((foundShoes) => {
+      res.render('show.ejs', {
+        shoes: foundShoes
+      })
+    })
+  })
+
+
+  app.get('/:id/edit', (req,res)=> {
+    Infoschema.findById(req.params.id).then((currentShoes) => {
+        res.render('edit.ejs', {
+            shoes: currentShoes
+        })
+    })
+})
+
+
+
+app.post('/', (req, res) => {
+    Infoschema.create(req.body).then((createdShoes) => {
+        res.redirect('/')
+    })
+  })
+
+
+  app.delete('/:id', (req, res) => {
+    Infoschema.findByIdAndRemove(req.params.id).then(() => {
+        res.redirect('/')
+    })
+  })
+
+
+  app.put('/:id', (req, res) => {
+    Infoschema.findByIdAndUpdate(req.params.id, req.body, {new:true}).then(() => {
+        res.redirect('/')
+    })
+  }) 
+    
 
 mongoose.connect('mongodb://localhost:27017/closet').then(() => {
     console.log('connection with mongo established')
