@@ -25,8 +25,8 @@ app.get('/', (req,res) => {
 })
 
 app.get('/new', (req,res)=> {
-    res.render('new.ejs')
- })
+  res.render('new.ejs')
+})
 
  app.get('/:id', (req, res) => {
     Infoschema.findById(req.params.id).then((foundShoes) => {
@@ -38,7 +38,7 @@ app.get('/new', (req,res)=> {
 
 
   app.get('/:id/edit', (req,res)=> {
-    Infoschema.findById(req.params.id).then((currentShoes) => {
+    Infoschema.findByIdAndUpdate(req.params.id).then((currentShoes) => {
         res.render('edit.ejs', {
             shoes: currentShoes
         })

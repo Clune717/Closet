@@ -1,0 +1,17 @@
+//image css
+margin: 75px;
+width: 28%;
+//
+
+
+add button 
+element.style {
+    text-align: end;
+    font-variant-caps: petite-caps;
+}
+
+
+.supplies{
+    display: block;
+    width: 50%;
+}
