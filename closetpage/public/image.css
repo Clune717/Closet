@@ -1,7 +1,10 @@
-//image css
-margin: 75px;
-width: 28%;
-//
+
+* {
+    background-color: aquamarine;
+    margin: 50px;
+}
+
+
 
 
 add button 
@@ -13,5 +16,32 @@ element.style {
 
 .supplies{
     display: block;
-    width: 50%;
+    margin: 10%;
+
+}
+
+
+.pictures{
+width: 45%;
+}
+
+style link{
+    font-style: oblique;
+    background-color: cornsilk;
+
+}
+
+h1{
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.addButton{
+    text-align: end;
 }

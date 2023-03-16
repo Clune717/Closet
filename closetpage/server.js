@@ -16,6 +16,7 @@ app.use(express.urlencoded({extended: true}))
 //     })
 //  })
 
+
 app.get('/', (req,res) => {
     Infoschema.find({}).then((allShoes)=> {
         res.render('index.ejs', {
@@ -24,9 +25,10 @@ app.get('/', (req,res) => {
     })
 })
 
-app.get('/new', (req,res)=> {
+  app.get('/new', (req,res)=> {
   res.render('new.ejs')
 })
+
 
  app.get('/:id', (req, res) => {
     Infoschema.findById(req.params.id).then((foundShoes) => {
@@ -37,6 +39,8 @@ app.get('/new', (req,res)=> {
   })
 
 
+
+
   app.get('/:id/edit', (req,res)=> {
     Infoschema.findByIdAndUpdate(req.params.id).then((currentShoes) => {
         res.render('edit.ejs', {
@@ -44,7 +48,6 @@ app.get('/new', (req,res)=> {
         })
     })
 })
-
 
 
 app.post('/', (req, res) => {
