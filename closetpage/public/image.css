@@ -7,8 +7,7 @@
 
 
 
-add button 
-element.style {
+.addButton {
     text-align: end;
     font-variant-caps: petite-caps;
 }
