@@ -22,7 +22,7 @@
     <div class="addButton">
         <a href="/new">Add A Shoe</a>
     </div>
-    <div class="container text-center bg-primary p-3">
+    <div class="card text-bg-primary" mb-3 style="max-width: 18rem;">
         <%for(let i=0; i < shoes.length; i++) {%>
 
             <%=shoes[i].brand%>
@@ -34,9 +34,10 @@
                 </br>
                 Retail Price: $<%=shoes[i].retail%>
                     </br>
-                    SZ:<%=shoes[i].size%>
+                    SZ:<%=shoes[i].size%> </div>
                         </br>
                         <img src='<%=shoes[i].img%>'  class="img-fluid"></img>
+                        <div class="card text-bg-primary" mb-3 style="max-width: 18rem;">
                         <form action="/<%=shoes[i]._id%>?_method=DELETE" method="POST">
                             <input class="btn btn-primary" type="submit" 
                             value="DELETE">
@@ -44,10 +45,11 @@
                         </br>
                         Price To Buy: $<%=shoes[i].cost%>
                     </br>
-                            <%}%>
+                           
 
-
-    </div>
+                </div> 
+                <%}%>
+   
 
 </body>
 
